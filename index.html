@@ -14,13 +14,13 @@
 <body class="d-flex align-items-center px-5">
 
     <!-- Contenitore principale -->
-    <div class="container-fluid border border-black d-flex">
+    <div class="container-fluid px-0 border border-black d-flex">
 
         <!-- Contenitore del dei contatti a sinistra -->
-        <div id="left-block" class="border border-danger col-5">
+        <div id="left-block" class=" col-5">
 
             <!-- Contenitore header del blocco -->
-            <div id="header-left-block" class="d-flex align-items-center justify-content-between px-3">
+            <div id="header-left-block" class="d-flex align-items-center justify-content-between px-3 py-2">
                 
                 <!-- Contenitore img profilo e nome utente -->
                 <div class="d-flex align-items-center">
@@ -40,16 +40,100 @@
             </div>
 
             <!-- Messaggio notifiche -->
-            <div id="mess-container" class="d-flex align-items-center py-2">
-                <div class="circle-mess d-flex align-items-center justify-content-center mx-4">
+            <div id="mess-container" class="d-flex align-items-center py-2 px-4">
+                <div class="circle-mess d-flex align-items-center justify-content-center">
                     <i class="fa-solid fa-bell-slash fs-2 "></i>
                 </div>
 
-                <div>
+                <div class="ms-2">
                     <span class="d-block fw-bold">Ricevi notifiche di nuovi messaggi</span>
                     <span class="fw-lighter text-decoration-underline">Attiva notifiche dekstop</span>
                 </div>
             </div>
+
+            <!-- Barra di ricerca -->
+            <div class="d-flex bg-white mx-3 my-3 p-2">
+                <div class="col-1 d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="col-11">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100">
+                </div>
+            </div>
+
+            <!-- Sezione Contatti in maniera dinamica -->
+            <div class="bg-white me-3">
+
+                <!-- Contatto -->
+                <div>
+                    <div class="py-1 border-bottom d-flex position-relative">
+                        <figure class="mx-3">
+                            <img src="./img/avatar_1.jpg" alt="">
+                        </figure>
+
+                        <div>
+                            <span class="d-block fw-bold fs-5">Fabio</span>
+                            <span class="fw-light text-secondary">Ultimo messaggio inviato</span>
+                        </div>
+
+                        <div class="position-absolute right top-0 end-0 me-2 mt-1">
+                            <span class="fw-light text-secondary">12:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="py-1 border-bottom d-flex position-relative">
+                        <figure class="mx-3">
+                            <img src="./img/avatar_1.jpg" alt="">
+                        </figure>
+
+                        <div>
+                            <span class="d-block fw-bold fs-5">Fabio</span>
+                            <span class="fw-light text-secondary">Ultimo messaggio inviato</span>
+                        </div>
+
+                        <div class="position-absolute right top-0 end-0 me-2 mt-1">
+                            <span class="fw-light text-secondary">12:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="py-1 border-bottom d-flex position-relative">
+                        <figure class="mx-3">
+                            <img src="./img/avatar_1.jpg" alt="">
+                        </figure>
+
+                        <div>
+                            <span class="d-block fw-bold fs-5">Fabio</span>
+                            <span class="fw-light text-secondary">Ultimo messaggio inviato</span>
+                        </div>
+
+                        <div class="position-absolute right top-0 end-0 me-2 mt-1">
+                            <span class="fw-light text-secondary">12:00</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="py-1 border-bottom d-flex position-relative">
+                        <figure class="mx-3">
+                            <img src="./img/avatar_1.jpg" alt="">
+                        </figure>
+
+                        <div>
+                            <span class="d-block fw-bold fs-5">Fabio</span>
+                            <span class="fw-light text-secondary">Ultimo messaggio inviato</span>
+                        </div>
+
+                        <div class="position-absolute right top-0 end-0 me-2 mt-1">
+                            <span class="fw-light text-secondary">12:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
         </div>
 
         <!-- Contenitore di destra della chat -->
