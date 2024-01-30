@@ -27,8 +27,13 @@ figure img{
     border-radius: 100%;
 }
 
+input{
+    border: none;
+}
+
 .container-fluid{
-    background-color: #D7D6D7;
+    background-color: white;
+    height: 800px;
 }
 
 /* LEFT BLOCK */
@@ -46,7 +51,29 @@ figure img{
 #mess-container .circle-mess i{
     color: #8EDAFC;
 }
+ 
 
-input{
-    border: none;
+/* RIGHT BLOCK */
+#header-right-block,
+#chatSection{
+    height: 85px;
 }
+
+.chat-container{
+    height: calc(100% - 85px);
+    overflow: auto;
+    background-image: url(./img/mine.jpg);
+}
+
+#chatSection{
+    background-color: #F3EEEA;
+}
+
+#chatSection input{
+    width: 400px;
+}
+
+
+
+
+
