@@ -33,7 +33,7 @@ input{
 
 .container-fluid{
     background-color: white;
-    height: 800px;
+    height: 900px;
 }
 
 /* LEFT BLOCK */
@@ -63,6 +63,8 @@ input{
     height: calc(100% - 85px);
     overflow: auto;
     background-image: url(./img/mine.jpg);
+    padding-top: 80px;
+    padding-left: 40px;
 }
 
 #chatSection{
@@ -71,6 +73,18 @@ input{
 
 #chatSection input{
     width: 400px;
+}
+
+#whiteMess{
+    background-color: white;
+    width: 30%;
+    padding: 10px;
+}
+
+#greenMess{
+    background-color: #D5F9BA;
+    width: 30%;
+    padding: 10px;
 }
 
 
