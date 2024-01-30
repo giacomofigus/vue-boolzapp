@@ -14,3 +14,18 @@ body{
         #d9dbd4 100%
         );
 }
+
+figure  {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+figure img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.container-fluid{
+    background-color: #D7D6D7;
+}
