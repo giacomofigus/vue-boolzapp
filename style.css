@@ -29,3 +29,19 @@ figure img{
 .container-fluid{
     background-color: #D7D6D7;
 }
+
+/* LEFT BLOCK */
+#mess-container{
+    background-color: #8EDAFC;
+}
+
+#mess-container .circle-mess{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+}
+
+#mess-container .circle-mess i{
+    color: #8EDAFC;
+}
