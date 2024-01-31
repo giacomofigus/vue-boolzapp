@@ -68,6 +68,7 @@
                 <!-- Contatto -->
                 <div
                     v-for="(element, index) in contacts"
+                    @click="changeUser(index)"
                 >
                     <div class="py-1 border-bottom d-flex position-relative">
                         <figure class="mx-3">
@@ -76,11 +77,15 @@
 
                         <div>
                             <span class="d-block fw-bold fs-5">{{element.name}}</span>
-                            <span class="fw-light text-secondary">Ultimo messaggio inviato</span>
+                            <span class="fw-light text-secondary">
+                                {{ element.messages[element.messages.length -1].message  }}
+                            </span>
                         </div>
 
                         <div class="position-absolute right top-0 end-0 me-2 mt-1">
-                            <span class="fw-light text-secondary">12:00</span>
+                            <span class="fw-light text-secondary">
+                                {{ element.messages[element.messages.length -1].date  }}
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -98,12 +103,12 @@
                 <!-- Contenitore img profilo e nome utente -->
                 <div class="d-flex align-items-center">
                     <figure class="mx-2">
-                        <img src="./img/avatar_1.jpg" alt="">
+                        <img :src="contacts[currentAvatar].avatar" alt="">
                     </figure>
 
                     <div>
-                        <span class="d-block fw-bold fs-5">Fabio</span>
-                        <span class="fw-light text-secondary">Ultimo messaggio inviato</span>
+                        <span class="d-block fw-bold fs-5">{{ contacts[currentAvatar].name }}</span>
+                        <span class="fw-light text-secondary">Ultimo messaggio inviato : {{  }}</span>
                     </div>
 
                 </div>
@@ -119,22 +124,18 @@
             <!-- Contenitore della chat -->
             <div class="chat-container d-flex flex-column">
 
-                <div>
-                    <div id="whiteMess" class="rounded position-relative mt-1 ">
-                        Ciao come va?
-                        <span class="fw-light text-secondary position-absolute bottom-0 end-0 me-1"> 12:00 </span>
+                <div class="pe-5 d-flex"
+                v-for="(elements, index) in contacts[currentAvatar].messages"
+                :class="{ 'justify-content-end': elements.status === 'inviato' }"
+                >
+                    <div id="Mess" 
+                    class=" rounded position-relative mt-1 "
+                    :class="(elements.status === 'inviato') ? 'sent' : 'received'"
+                    >
+                       {{ elements.message }}
+                        <span class="ora fw-light text-secondary position-absolute bottom-0 end-0 me-1"> 12:00 </span>
                     </div>
                 </div>
-                
-
-                <div class="d-flex justify-content-end pe-5">
-                    <div id="greenMess" class="rounded position-relative">
-                        Bene te
-                        <span class="fw-light text-secondary position-absolute bottom-0 end-0 me-1"> 12:00 </span>
-                    </div>
-                </div>
-
-                
                 
             </div>
 

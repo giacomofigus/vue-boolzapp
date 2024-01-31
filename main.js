@@ -36,9 +36,9 @@ createApp({
                   avatar: 'img/avatar_1.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 08:00:00', message: 'Ciao!', status: 'inviato' },
-                    { date: '2024-01-31 10:30:00', message: 'Come stai?', status: 'inviato' },
-                    { date: '2024-02-01 12:45:00', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 08:00', message: 'Ciao!', status: 'inviato' },
+                    { date: '2024-01-31 10:30', message: 'Come stai?', status: 'inviato' },
+                    { date: '2024-02-01 12:45', message: 'Tutto bene, grazie!', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -46,9 +46,9 @@ createApp({
                   avatar: 'img/avatar_2.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 09:15:00', message: 'Hey!', status: 'inviato' },
-                    { date: '2024-01-31 11:45:00', message: 'Sto bene, tu?', status: 'inviato' },
-                    { date: '2024-02-01 13:30:00', message: 'Anche io, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 09:15', message: 'Hey!', status: 'inviato' },
+                    { date: '2024-01-31 11:45', message: 'Sto bene, tu?', status: 'inviato' },
+                    { date: '2024-02-01 13:30', message: 'Anche io, grazie!', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -56,9 +56,9 @@ createApp({
                   avatar: 'img/avatar_3.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 10:30:00', message: 'Salve!', status: 'inviato' },
-                    { date: '2024-01-31 12:15:00', message: 'Come va?', status: 'inviato' },
-                    { date: '2024-02-01 14:20:00', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 10:30', message: 'Salve!', status: 'inviato' },
+                    { date: '2024-01-31 12:15', message: 'Come va?', status: 'inviato' },
+                    { date: '2024-02-01 14:20', message: 'Tutto bene, grazie!', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -66,9 +66,9 @@ createApp({
                   avatar: 'img/avatar_4.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 11:00:00', message: 'Buongiorno!', status: 'inviato' },
-                    { date: '2024-01-31 13:30:00', message: 'Che fai?', status: 'inviato' },
-                    { date: '2024-02-01 15:15:00', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 11:00', message: 'Buongiorno!', status: 'inviato' },
+                    { date: '2024-01-31 13:30', message: 'Che fai?', status: 'inviato' },
+                    { date: '2024-02-01 15:15', message: 'Tutto bene, grazie!', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -76,9 +76,9 @@ createApp({
                   avatar: 'img/avatar_5.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 12:45:00', message: 'Ciao!', status: 'inviato' },
-                    { date: '2024-01-31 14:00:00', message: 'Come va?', status: 'inviato' },
-                    { date: '2024-02-01 16:00:00', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 12:45', message: 'Ciao!', status: 'inviato' },
+                    { date: '2024-01-31 14:00', message: 'Come va?', status: 'inviato' },
+                    { date: '2024-02-01 16:00', message: 'Tutto bene, grazie!', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -86,9 +86,9 @@ createApp({
                   avatar: 'img/avatar_6.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 13:20:00', message: 'Saluti!', status: 'inviato' },
-                    { date: '2024-01-31 15:15:00', message: 'Come ti senti?', status: 'inviato' },
-                    { date: '2024-02-01 17:30:00', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 13:20', message: 'Saluti!', status: 'inviato' },
+                    { date: '2024-01-31 15:15', message: 'Come ti senti?', status: 'inviato' },
+                    { date: '2024-02-01 17:30', message: 'Tutto bene, grazie!', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -96,9 +96,9 @@ createApp({
                   avatar: 'img/avatar_7.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 14:00:00', message: 'Ciao!', status: 'inviato' },
-                    { date: '2024-01-31 16:00:00', message: 'Che fai?', status: 'inviato' },
-                    { date: '2024-02-01 18:00:00', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 14:00', message: 'Ciao!', status: 'inviato' },
+                    { date: '2024-01-31 16:00', message: 'Che fai?', status: 'inviato' },
+                    { date: '2024-02-01 18:00', message: 'Tutto bene, grazie!', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -106,13 +106,24 @@ createApp({
                   avatar: 'img/avatar_8.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 15:30:00', message: 'Hey!', status: 'inviato' },
-                    { date: '2024-01-31 17:45:00', message: 'Come stai?', status: 'inviato' },
-                    { date: '2024-02-01 20:15:00', message: 'Anche io, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 15:30', message: 'Hey!', status: 'inviato' },
+                    { date: '2024-01-31 17:45', message: 'Come stai?', status: 'inviato' },
+                    { date: '2024-02-01 20:15', message: 'Anche io, grazie!', status: 'ricevuto' }
                   ]
                 }
               ]
 
+        }
+    },
+    methods:{
+        changeUser(index){
+            this.currentAvatar = index
+            console.log(this.contacts[this.currentAvatar].messages);
+            
+        },
+        getHours(){
+          // const  hours = (this.contacts[this.currentAvatar].messages[2].date.slice(11, -3));
+          
         }
     }
 }).mount("#app")    

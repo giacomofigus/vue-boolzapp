@@ -75,17 +75,24 @@ input{
     width: 400px;
 }
 
-#whiteMess{
+.received{
     background-color: white;
     width: 30%;
     padding: 10px;
 }
 
-#greenMess{
+.sent{
     background-color: #D5F9BA;
     width: 30%;
     padding: 10px;
+    
 }
+
+.ora{
+    font-size: 12px;
+}
+
+
 
 
 
