@@ -84,7 +84,7 @@
 
                         <div class="position-absolute right top-0 end-0 me-2 mt-1">
                             <span class="fw-light text-secondary">
-                                {{ element.messages[element.messages.length -1].date  }}
+                                {{ gettingHours(element.messages[element.messages.length - 1].date) }}
                             </span>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
 
                     <div>
                         <span class="d-block fw-bold fs-5">{{ contacts[currentAvatar].name }}</span>
-                        <span class="fw-light text-secondary">Ultimo messaggio inviato : {{  }}</span>
+                        <span class="fw-light text-secondary">Ultimo messaggio inviato : {{  }} </span>
                     </div>
 
                 </div>
@@ -133,7 +133,9 @@
                     :class="(elements.status === 'inviato') ? 'sent' : 'received'"
                     >
                        {{ elements.message }}
-                        <span class="ora fw-light text-secondary position-absolute bottom-0 end-0 me-1"> 12:00 </span>
+                        <span class="ora fw-light text-secondary position-absolute bottom-0 end-0 me-1" v-model>
+                            {{ gettingHours(elements.date) }}
+                        </span>
                     </div>
                 </div>
                 
@@ -143,7 +145,14 @@
 
                 <i class="fa-regular fa-face-smile text-secondary fs-4"></i>
                 
-                <input type="text" placeholder="Scrivi un messaggio" class="rounded p-2">
+                
+                <input
+                type="text" 
+                placeholder="Scrivi un messaggio" 
+                class="rounded p-2"
+                @keyup.enter="addMess(index)"
+                v-model="newMessage"
+                >
 
                 <i class="fa-solid fa-microphone text-secondary fs-4"></i>
                 

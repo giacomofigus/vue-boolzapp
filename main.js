@@ -29,6 +29,7 @@ createApp({
     data(){
         return{
 
+            newMessage: "",
             currentAvatar: 0,
             contacts: [
                 {
@@ -46,9 +47,9 @@ createApp({
                   avatar: 'img/avatar_2.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 09:15', message: 'Hey!', status: 'inviato' },
-                    { date: '2024-01-31 11:45', message: 'Sto bene, tu?', status: 'inviato' },
-                    { date: '2024-02-01 13:30', message: 'Anche io, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 09:15', message: 'Hey!', status: 'ricevuto' },
+                    { date: '2024-01-31 11:45', message: 'Come va?', status: 'ricevuto' },
+                    { date: '2024-02-01 13:30', message: 'Bene, grazie!', status: 'inviato' }
                   ]
                 },
                 {
@@ -56,9 +57,9 @@ createApp({
                   avatar: 'img/avatar_3.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 10:30', message: 'Salve!', status: 'inviato' },
-                    { date: '2024-01-31 12:15', message: 'Come va?', status: 'inviato' },
-                    { date: '2024-02-01 14:20', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 10:30', message: 'Fatta la spesa?', status: 'inviato' },
+                    { date: '2024-01-31 12:15', message: 'eja', status: 'ricevuto' },
+                    { date: '2024-02-01 14:20', message: 'Appo', status: 'inviato' }
                   ]
                 },
                 {
@@ -66,9 +67,9 @@ createApp({
                   avatar: 'img/avatar_4.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 11:00', message: 'Buongiorno!', status: 'inviato' },
-                    { date: '2024-01-31 13:30', message: 'Che fai?', status: 'inviato' },
-                    { date: '2024-02-01 15:15', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-30 11:00', message: 'Vinto 100€ alla schedina', status: 'ricevuto' },
+                    { date: '2024-01-31 13:30', message: 'Brutto burdo', status: 'inviato' },
+                    { date: '2024-02-01 15:15', message: 'Ahahahaha', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -77,8 +78,8 @@ createApp({
                   visible: true,
                   messages: [
                     { date: '2024-01-30 12:45', message: 'Ciao!', status: 'inviato' },
-                    { date: '2024-01-31 14:00', message: 'Come va?', status: 'inviato' },
-                    { date: '2024-02-01 16:00', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-31 14:00', message: 'Cavallo', status: 'inviato' },
+                    { date: '2024-02-01 16:00', message: 'Ti coddiri', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -87,8 +88,8 @@ createApp({
                   visible: true,
                   messages: [
                     { date: '2024-01-30 13:20', message: 'Saluti!', status: 'inviato' },
-                    { date: '2024-01-31 15:15', message: 'Come ti senti?', status: 'inviato' },
-                    { date: '2024-02-01 17:30', message: 'Tutto bene, grazie!', status: 'ricevuto' }
+                    { date: '2024-01-31 15:15', message: 'Molenti', status: 'inviato' },
+                    { date: '2024-02-01 17:30', message: 'Demullu', status: 'ricevuto' }
                   ]
                 },
                 {
@@ -118,12 +119,24 @@ createApp({
     methods:{
         changeUser(index){
             this.currentAvatar = index
-            console.log(this.contacts[this.currentAvatar].messages);
-            
         },
-        getHours(){
-          // const  hours = (this.contacts[this.currentAvatar].messages[2].date.slice(11, -3));
-          
+        gettingHours(dateString){
+          const date = new Date(dateString)
+          return `${date.getHours()}:${date.getMinutes()}`;
+        },
+        addMess(){
+          if(this.newMessage !== ""){
+
+            let fullDate = new Date()
+            let fullHours = `${fullDate.getHours()}:${fullDate.getMinutes()}` 
+            
+            this.contacts[this.currentAvatar].messages.push({
+              date: fullDate,
+              message: this.newMessage,
+              status: 'inviato',
+            })
+          }
+          this.newMessage=""
         }
     }
 }).mount("#app")    
