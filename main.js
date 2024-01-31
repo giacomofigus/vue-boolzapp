@@ -135,6 +135,15 @@ createApp({
               message: this.newMessage,
               status: 'inviato',
             })
+
+            setTimeout(() => {
+              this.contacts[this.currentAvatar].messages.push({
+                date: new Date(),
+                message: "ok",
+                status: 'ricevuto',
+              })
+            }, 1000)
+            
           }
           this.newMessage=""
         }
