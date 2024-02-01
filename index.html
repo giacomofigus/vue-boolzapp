@@ -58,7 +58,12 @@
                 </div>
 
                 <div class="col-11">
-                    <input type="text" placeholder="Cerca o inizia una nuova chat" class="w-100 ">
+                    <input 
+                    type="text" 
+                    placeholder="Cerca o inizia una nuova chat" class="w-100 "
+                    @keyup.enter="searchContact()"
+                    v-model="searchName"
+                    >
                 </div>
             </div>
 
@@ -69,6 +74,7 @@
                 <div
                     v-for="(element, index) in contacts"
                     @click="changeUser(index)"
+                    v-show="element.visible"
                 >
                     <div class="py-1 border-bottom d-flex position-relative">
                         <figure class="mx-3">
