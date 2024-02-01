@@ -88,10 +88,24 @@ input{
     
 }
 
-.ora{
+.ora,
+.fa-chevron-down{
     font-size: 12px;
 }
 
+.fa-chevron-down{
+    color: lightgray;
+    cursor: pointer;
+}
+
+#dropdown{
+    background-color: #f1f1f1;
+    top: 18px;
+    right: 5px;
+    z-index: 1;
+    padding: 10px;
+    padding-inline: 30px;
+}
 
 
 

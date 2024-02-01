@@ -1,9 +1,4 @@
 /*
-
-Milestone 4
-● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
-contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
-“mar” rimangono solo Marco e Martina)
 Milestone 5 - opzionale
 ● Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
 permette di cancellare il messaggio selezionato
@@ -15,7 +10,8 @@ const { createApp } = Vue
 createApp({
     data(){
         return{
-
+            counter: 0, 
+            show: null,
             searchName: "",
             newMessage: "",
             currentAvatar: 0,
@@ -25,7 +21,7 @@ createApp({
                   avatar: 'img/avatar_1.jpg',
                   visible: true,
                   messages: [
-                    { date: '2024-01-30 08:00', message: 'Ciao!', status: 'inviato' },
+                    { date: '2024-01-30 08:00', message: 'we!', status: 'inviato' },
                     { date: '2024-01-31 10:30', message: 'Come stai?', status: 'inviato' },
                     { date: '2024-02-01 12:45', message: 'Tutto bene, grazie!', status: 'ricevuto' }
                   ]
@@ -138,7 +134,7 @@ createApp({
         searchContact(){
 
           this.contacts.forEach((element) =>{
-            
+
             if(element.name.toLowerCase().includes(this.searchName.toLowerCase())){
               element.visible = true
             } else {
@@ -146,6 +142,18 @@ createApp({
             }
           })
 
-        }
+        },
+        openMessage(index){
+
+          this.show = index
+          this.counter++
+
+          if(this.counter % 2 === 0){
+            this.show = null
+          }
+
+          
+        },
+        
     }
 }).mount("#app")    

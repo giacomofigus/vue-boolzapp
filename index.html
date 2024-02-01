@@ -11,10 +11,11 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="d-flex align-items-center px-5">
+<body 
+class="d-flex align-items-center px-5">
 
     <!-- Contenitore principale -->
-    <div class="container-fluid px-0 d-flex" id="app">
+    <div class="container-fluid px-0 d-flex" id="app" >
 
         <!-- Contenitore del dei contatti a sinistra -->
         <div id="left-block" class=" col-5">
@@ -74,7 +75,7 @@
                 <div
                     v-for="(element, index) in contacts"
                     @click="changeUser(index)"
-                    v-show="element.visible"
+                    v-show="element.visible" 
                 >
                     <div class="py-1 border-bottom d-flex position-relative">
                         <figure class="mx-3">
@@ -142,6 +143,24 @@
                         <span class="ora fw-light text-secondary position-absolute bottom-0 end-0 me-1" v-model>
                             {{ gettingHours(elements.date) }}
                         </span>
+
+                        <span class="position-absolute top-0 end-0 me-1">
+                            <i 
+                            class="fas fa-chevron-down"
+                            @click="openMessage(index)"
+                            >
+                            </i>
+                        </span>
+
+                        <div 
+                        id="dropdown" 
+                        class="position-absolute flex-column gap-2 d-flex"
+                        v-if="show === index"
+                        >
+                            <span class="fw-semibold">Info</span>
+                            
+                            <span class="fw-semibold">Delete</span>
+                        </div>
                     </div>
                 </div>
                 
