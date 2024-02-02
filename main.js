@@ -10,6 +10,7 @@ const { createApp } = Vue
 createApp({
     data(){
         return{
+            currentContact: 0,
             counter: 0, 
             show: null,
             searchName: "",
@@ -144,16 +145,21 @@ createApp({
 
         },
         openMessage(index){
-
           this.show = index
           this.counter++
+          
 
           if(this.counter % 2 === 0){
             this.show = null
           }
-
-          
         },
+        deleteMessage(index){
+          
+          const currentContact = this.contacts[this.currentAvatar]
+
+          currentContact.messages.splice(index, 1);
+          
+        }
         
     }
 }).mount("#app")    
